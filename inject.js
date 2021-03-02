@@ -79,7 +79,7 @@ if (!window.chrome){
 if (!window.opera){
 	Object.defineProperty(window, 'opera', {
 		get(){
-			return true;
+			return false;
 		}
 	})
 }

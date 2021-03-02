@@ -3,3 +3,4 @@
 node_modules
 chrome_pkg
 package-lock.json
+*.txt
