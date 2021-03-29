@@ -5,8 +5,6 @@
  */
 const script = document.createElement("script");
 script.textContent = `
-/* These bypasses tab focus events */
-// At first Defines document properties
 Object.defineProperty(document, 'visibilityState', {
 	get() {
 		return 'visible';
@@ -27,8 +25,6 @@ Object.defineProperty(document, 'webkitHidden', {
 		return false;
 	}
 });
-
-// Defines window properties
 Object.defineProperty(window, 'visibilityState', {
 	get() {
 		return 'visible';
@@ -49,8 +45,6 @@ Object.defineProperty(window, 'webkitHidden', {
 		return false;
 	}
 });
-
-// Added some event listeners
 const block = e => {
 	e.preventDefault();
 	e.stopPropagation();
@@ -63,9 +57,6 @@ document.addEventListener('hasFocus', block, true);
 document.addEventListener('blur', block, true);
 window.addEventListener('blur', block, true);
 window.addEventListener('mouseleave', block, true);
-/********************************/
-
-/* These bypasses browser check events */
 navigator.__defineGetter__('userAgent', function () {
 	// return "Mozilla/5.0 (Linux; Android 10; Redmi Note 7S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Mobile Safari/537.36";
     return "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.43 Safari/537.36";
@@ -86,5 +77,3 @@ if (!window.opera){
 }
 `;
 document.documentElement.appendChild(script);
-// script.remove();
-
