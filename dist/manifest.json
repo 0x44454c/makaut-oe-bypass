@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "MAKAUT OE Bypass",
-	"version": "2.0.0",
+	"version": "2.4.0",
 	"description": "This allows to bypass makaut online browser check and browser focus check!",
 	"author": "DelusionaL",
 	"icons": {

@@ -3,8 +3,6 @@
  * @author: DelusionaL
  * Extension: Makaut Online Exam Bypass
  */
-const script = document.createElement("script");
-script.textContent = `
 /* These bypasses tab focus events */
 // At first Defines document properties
 Object.defineProperty(document, 'visibilityState', {
@@ -68,26 +66,25 @@ window.addEventListener('mouseleave', block, true);
 /* These bypasses browser check events */
 navigator.__defineGetter__('userAgent', function () {
 	// return "Mozilla/5.0 (Linux; Android 10; Redmi Note 7S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Mobile Safari/537.36";
-  //  return "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.43 Safari/537.36";
+	//  return "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.43 Safari/537.36";
 	return "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4392.0 Safari/537.36"
 });
-if (!window.chrome){
+if (!window.chrome) {
 	Object.defineProperty(window, 'chrome', {
-		get(){
+		get() {
 			return true;
 		}
 	})
 }
-if (!window.opera){
+if (!window.opera) {
 	Object.defineProperty(window, 'opera', {
-		get(){
+		get() {
 			return false;
 		}
 	})
 }
-`;
-
-document.documentElement.appendChild(script);
+console.log("%c😊 All the best! 😊", "font-size:150%;color:firebrick;font-weight:700;")
+console.log("%c🛠️ Developed By DelusionaL 🛠️", "color:skyblue;font-weight:600;")
 
 function imp(e) {
 	e.stopImmediatePropagation();
