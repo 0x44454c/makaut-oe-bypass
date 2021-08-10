@@ -10,7 +10,7 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"<all_urls>"
+				"https://*.ucanapply.com/*"
 			],
 			"run_at": "document_start",
 			"all_frames": true,

@@ -68,7 +68,8 @@ window.addEventListener('mouseleave', block, true);
 /* These bypasses browser check events */
 navigator.__defineGetter__('userAgent', function () {
 	// return "Mozilla/5.0 (Linux; Android 10; Redmi Note 7S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Mobile Safari/537.36";
-    return "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.43 Safari/537.36";
+  //  return "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.43 Safari/537.36";
+	return "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4392.0 Safari/537.36"
 });
 if (!window.chrome){
 	Object.defineProperty(window, 'chrome', {
@@ -85,6 +86,21 @@ if (!window.opera){
 	})
 }
 `;
+
 document.documentElement.appendChild(script);
-// script.remove();
+
+function imp(e) {
+	e.stopImmediatePropagation();
+};
+document.addEventListener('contextmenu', imp, true);
+document.addEventListener('paste', imp, true);
+document.addEventListener('copy', imp, true);
+document.addEventListener('cut', imp, true);
+document.addEventListener('selectstart', imp, true);
+document.addEventListener('mousedown', imp, true);
+document.addEventListener('mousemove', imp, true);
+// document.addEventListener('mouseenter', imp, true);
+document.addEventListener('mouseon', imp, true);
+// document.addEventListener('dragstart', imp, true);
+// window.addEventListener('focusout', imp, true)
 
