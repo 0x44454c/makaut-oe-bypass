@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
 	"name": "MAKAUT OE Bypass",
-	"version": "2.4.0",
-	"description": "This allows to bypass makaut online browser check and browser focus check!",
+	"version": "2.5.0",
+	"description": "This allows to bypass MAKAUT online browser check and browser focus check!",
 	"author": "DelusionaL",
 	"icons": {
 		"48": "icon48.png"
@@ -16,7 +16,18 @@
 			"all_frames": true,
 			"match_about_blank": true,
 			"js": [
-				"inject.js"
+				"start.js"
+			]
+		},
+		{
+			"matches": [
+				"https://*.ucanapply.com/*"
+			],
+			"run_at": "document_end",
+			"all_frames": true,
+			"match_about_blank": true,
+			"js": [
+				"end.js"
 			]
 		}
 	]
