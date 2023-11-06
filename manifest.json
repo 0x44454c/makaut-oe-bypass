@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "MAKAUT OE Bypass",
 	"version": "2.5.0",
 	"description": "This allows to bypass MAKAUT online browser check and browser focus check!",
